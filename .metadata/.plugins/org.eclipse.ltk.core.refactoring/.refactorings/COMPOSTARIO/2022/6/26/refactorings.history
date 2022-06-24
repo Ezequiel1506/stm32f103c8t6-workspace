@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;COMPOSTARIO/Core/Src/hc-sr04&apos; to &apos;hc-sr04.c&apos;" description="Rename resource &apos;hc-sr04&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/hc-sr04" name="hc-sr04.c" stamp="1656024777505" updateReferences="true"/>
+</session>

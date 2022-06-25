@@ -100,12 +100,7 @@ int main(void)
 
   lcd_init();
   lcd_put_cur(0, 0);
-  lcd_send_string("Hola ");
-  lcd_send_string("WORLD ");
-  lcd_send_string("FROM");
-
-  lcd_put_cur(1, 0);
-  lcd_send_string("CONTROLLERS TECH");
+  lcd_send_string("COMPOSTARIO ");
   HAL_Delay(3000);
   lcd_clear();
 
@@ -116,16 +111,16 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  distance=measure_distance(htim1);
-	  lcd_init();
+
+    /* USER CODE BEGIN 3 */
+	  distance=measure_distance();
 	  lcd_put_cur(0, 0);
 	  lcd_send_string("Distancia ");
 	  sprintf(dist,"%u",distance);
 	  lcd_put_cur(1, 0);
 	  lcd_send_string(dist);
-	  HAL_Delay(3000);
+	  HAL_Delay(1000);
 	  lcd_clear();
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -186,7 +181,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 72-1;
+  htim1.Init.Prescaler = 71;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 0xffff-1;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;

@@ -8,6 +8,6 @@
 #ifndef INC_HC_SR04_H_
 #define INC_HC_SR04_H_
 
-uint16_t measure_distance (TIM_HandleTypeDef htim1);   // initialize lcd
+uint16_t  measure_distance ();   // initialize lcd
 
 #endif /* INC_HC_SR04_H_ */

@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="ST7735_IS_160X80"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="__HAL_TIM_GET_COUNTER"/>
 			<item value="ST7735_IS_160X80"/>
 			<item value="ST7735_WIDTH"/>
 		</list>

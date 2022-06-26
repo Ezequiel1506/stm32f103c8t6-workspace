@@ -14,7 +14,7 @@ extern TIM_HandleTypeDef timer;
 //uint32_t Value2 = 0;				//ORIGINAL
 //uint16_t Distance  = 0;			//ORIGINAL
 
-//uint16_t measure_distance(TIM_HandleTypeDef htim2) {
+
 uint16_t measure_distance() {
 	uint32_t pMillis = 0;
 	uint32_t Value1 = 0;

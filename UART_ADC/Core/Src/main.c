@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "LCD1602.h"
+//#include "LCD1602.h"
 #include <stdio.h>
 #include <string.h>
 

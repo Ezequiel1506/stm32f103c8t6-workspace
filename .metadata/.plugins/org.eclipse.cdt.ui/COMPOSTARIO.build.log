@@ -1,39 +1,49 @@
-15:35:44 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+16:25:23 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:194:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  194 |    sprintf(dist,"%u",distance);
-      |    ^~~~~~~
-../Core/Src/main.c:194:4: warning: incompatible implicit declaration of built-in function 'sprintf'
-../Core/Src/main.c:28:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   27 | #include "hc-sr04.h"
-  +++ |+#include <stdio.h>
-   28 | /* USER CODE END Includes */
-../Core/Src/main.c:195:18: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  195 |    sprintf(hum,"%u",humidity);
+../Core/Src/main.c:209:18: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  209 |    sprintf(hum,"%u",humidity);
       |                 ~^  ~~~~~~~~
       |                  |  |
       |                  |  uint32_t {aka long unsigned int}
       |                  unsigned int
       |                 %lu
-../Core/Src/main.c:196:19: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  196 |    sprintf(temp,"%u",temperature);
+../Core/Src/main.c:210:19: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  210 |    sprintf(temp,"%u",temperature);
       |                  ~^  ~~~~~~~~~~~
       |                   |  |
       |                   |  uint32_t {aka long unsigned int}
       |                   unsigned int
       |                  %lu
-../Core/Src/main.c:197:30: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  197 |    sprintf(sun_exposition, "%u",sun);
+../Core/Src/main.c:211:30: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  211 |    sprintf(sun_exposition, "%u",sun);
       |                             ~^  ~~~
       |                              |  |
       |                              |  uint32_t {aka long unsigned int}
       |                              unsigned int
       |                             %lu
+../Core/Src/main.c:212:40: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
+      |                                       ~^                                       ~~~~~~~~
+      |                                        |                                       |
+      |                                        unsigned int                            uint32_t {aka long unsigned int}
+      |                                       %lu
+../Core/Src/main.c:212:55: warning: format '%u' expects argument of type 'unsigned int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
+      |                                                      ~^                                  ~~~~~~~~~~~
+      |                                                       |                                  |
+      |                                                       unsigned int                       uint32_t {aka long unsigned int}
+      |                                                      %lu
+../Core/Src/main.c:212:62: warning: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
+      |                                                             ~^                                        ~~~
+      |                                                              |                                        |
+      |                                                              unsigned int                             uint32_t {aka long unsigned int}
+      |                                                             %lu
 ../Core/Src/main.c: In function 'MX_ADC1_Init':
-../Core/Src/main.c:282:26: warning: unused variable 'sConfig' [-Wunused-variable]
-  282 |   ADC_ChannelConfTypeDef sConfig = {0};
+../Core/Src/main.c:304:26: warning: unused variable 'sConfig' [-Wunused-variable]
+  304 |   ADC_ChannelConfTypeDef sConfig = {0};
       |                          ^~~~~~~
 arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: COMPOSTARIO.elf
@@ -41,11 +51,11 @@ Finished building target: COMPOSTARIO.elf
 arm-none-eabi-size   COMPOSTARIO.elf 
 arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
    text	   data	    bss	    dec	    hex	filename
-  15560	    120	   1760	  17440	   4420	COMPOSTARIO.elf
+  16872	    140	   1924	  18936	   49f8	COMPOSTARIO.elf
 Finished building: default.size.stdout
  
 Finished building: COMPOSTARIO.list
  
 
-15:35:46 Build Finished. 0 errors, 6 warnings. (took 2s.26ms)
+16:25:25 Build Finished. 0 errors, 7 warnings. (took 1s.538ms)
 

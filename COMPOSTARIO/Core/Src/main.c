@@ -25,6 +25,8 @@
 /* USER CODE BEGIN Includes */
 #include "LCD1602.h"
 #include "hc-sr04.h"
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +48,8 @@ ADC_HandleTypeDef hadc1;
 
 TIM_HandleTypeDef htim1;
 
+UART_HandleTypeDef huart1;
+
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -55,6 +59,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_ADC1_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -74,6 +79,11 @@ char dist[5]="";
 char temp[5]="";
 char hum[5]="";
 char sun_exposition[5]="";
+char msg[100]="";
+
+char AT[20]="temp=\"Ezequiel\"\r\n";
+
+
 
 
 
@@ -150,14 +160,15 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   MX_ADC1_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
   HAL_TIM_Base_Start(&htim1);
 
 
   lcd_init();
-  lcd_put_cur(0, 0);
-  lcd_send_string("COMPOSTARIO ");
+  lcd_put_cur(0, 2);
+  lcd_send_string("COMPOSTARIO!");
   HAL_Delay(3000);
   lcd_clear();
 
@@ -171,6 +182,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
+	  //Leen los ADC
 	  ADC_Select_CH1();
 	  HAL_ADC_Start(&hadc1);
 	  HAL_ADC_PollForConversion(&hadc1, 1000);
@@ -189,14 +201,19 @@ int main(void)
 	  sun=HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
+	  //Lee el Ultrasonido
 	  distance=measure_distance();
 
+	  //valores int a string
 	  sprintf(dist,"%u",distance);
 	  sprintf(hum,"%u",humidity);
 	  sprintf(temp,"%u",temperature);
 	  sprintf(sun_exposition, "%u",sun);
+	  sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
 
 
+
+	  // Imprimo en pantalla
 	  lcd_put_cur(0, 0);
 	  lcd_send_string("D:");
 	  lcd_put_cur(0, 2);
@@ -218,6 +235,11 @@ int main(void)
 	  lcd_send_string(sun_exposition);
 
 	  HAL_Delay(1000);
+	  //Envío por UART
+ 	  //HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 300);
+ 	  HAL_UART_Transmit(&huart1,(uint8_t*)AT, strlen(AT), 300);
+ 	  HAL_Delay(3000);
+
 	  lcd_clear();
   }
   /* USER CODE END 3 */
@@ -292,7 +314,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc1.Init.NbrOfConversion = 1;
+  hadc1.Init.NbrOfConversion = 3;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
     Error_Handler();
@@ -371,6 +393,39 @@ static void MX_TIM1_Init(void)
   /* USER CODE BEGIN TIM1_Init 2 */
 
   /* USER CODE END TIM1_Init 2 */
+
+}
+
+/**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
 
 }
 

@@ -1,4 +1,7 @@
-distance
-humidity
-temperature
-sun
+temperature_adc
+temperature_value
+humidity_adc
+humidity_value
+sun_adc
+hum
+temp

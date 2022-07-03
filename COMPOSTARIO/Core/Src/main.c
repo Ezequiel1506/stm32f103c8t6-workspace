@@ -27,6 +27,7 @@
 #include "hc-sr04.h"
 #include <stdio.h>
 #include <string.h>
+#include <utility.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +48,8 @@
 ADC_HandleTypeDef hadc1;
 
 TIM_HandleTypeDef htim1;
-
+TempTypeDef temp_t;
+HUMTypeDef hum_t;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
@@ -70,22 +72,23 @@ static void MX_USART1_UART_Init(void);
 int row=0;
 int col=0;
 uint16_t distance  = 0;
-uint32_t adc_value[3];		//to store adc values
-uint32_t humidity;		//to store adc values
-uint32_t temperature;		//to store adc values
-uint32_t sun;		//to store adc values
+uint8_t volume  = 0;
+uint16_t adc_value[3];				//to store adc values
+uint16_t humidity_adc;				//to store adc values
+uint16_t temperature_adc;			//to store adc values
+uint16_t sun_adc;					//to store adc values
 
-char dist[5]="";
-char temp[5]="";
-char hum[5]="";
-char sun_exposition[5]="";
+uint8_t humidity_value;				//to store  values
+uint8_t temperature_value;			//to store  values
+uint8_t sun_value;					//to store  values
+
+char vol[5]="";						//from values to messages
+char temp[5]="";					//from values to messages
+char hum[5]="";						//from values to messages
+char sun_exposition[5]="";			//from values to messages
 char msg[100]="";
 
 char AT[20]="temp=\"Ezequiel\"\r\n";
-
-
-
-
 
 
 void ADC_Select_CH1 (void){
@@ -186,60 +189,84 @@ int main(void)
 	  ADC_Select_CH1();
 	  HAL_ADC_Start(&hadc1);
 	  HAL_ADC_PollForConversion(&hadc1, 1000);
-	  humidity=HAL_ADC_GetValue(&hadc1);
+	  humidity_adc=HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
 	  ADC_Select_CH2();
 	  HAL_ADC_Start(&hadc1);
 	  HAL_ADC_PollForConversion(&hadc1, 1000);
-	  temperature=HAL_ADC_GetValue(&hadc1);
+	  temperature_adc=HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
 	  ADC_Select_CH3();
 	  HAL_ADC_Start(&hadc1);
 	  HAL_ADC_PollForConversion(&hadc1, 1000);
-	  sun=HAL_ADC_GetValue(&hadc1);
+	  sun_adc=HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
+
 
 	  //Lee el Ultrasonido
 	  distance=measure_distance();
+	  volume=calculate_volume(distance,1);
+
+	  //Convertir valores de adc a porcentaje de humedad
+	  humidity_value = adc_to_hum(humidity_adc);
+
+	  //Convertir valores de adc a temperatura
+	  temperature_value = adc_to_temp(temperature_adc);
 
 	  //valores int a string
-	  sprintf(dist,"%u",distance);
-	  sprintf(hum,"%u",humidity);
-	  sprintf(temp,"%u",temperature);
-	  sprintf(sun_exposition, "%u",sun);
-	  sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
+	  sprintf(vol,"%u",volume);
+	  sprintf(hum,"%u",humidity_value);
+	  sprintf(temp,"%u",temperature_value);
+	  sprintf(sun_exposition, "%u",sun_adc);
+	  sprintf(msg, "Volumen:%u Humedad:%u Temperatura:%u Sol:%u \r\n",volume, humidity_value, temperature_value, sun_adc);
 
 
 
-	  // Imprimo en pantalla
+	  // Imprimo en pantalla el volumen libre ocupado de la compostera
 	  lcd_put_cur(0, 0);
-	  lcd_send_string("D:");
+	  lcd_send_string("V:");
 	  lcd_put_cur(0, 2);
-	  lcd_send_string(dist);
+	  lcd_send_string(vol);
+	  lcd_put_cur(0,5);
+	  lcd_send_string("%");
 
-	  lcd_put_cur(0, 6);
+	  // Imprimo en pantalla la humedad  de la compostera
+	  lcd_put_cur(0,8);
 	  lcd_send_string("H:");
-	  lcd_put_cur(0, 8);
+	  lcd_put_cur(0,10);
 	  lcd_send_string(hum);
+	  lcd_put_cur(0,13);
+	  lcd_send_string("%");
 
+	  // Imprimo en pantalla la temperatura  de la compostera
 	  lcd_put_cur(1, 0);
 	  lcd_send_string("T:");
 	  lcd_put_cur(1, 2);
 	  lcd_send_string(temp);
+	  lcd_put_cur(1, 5);
+	  lcd_send_string("C");
 
-	  lcd_put_cur(1, 6);
-	  lcd_send_string("S:");
+	  // Imprimo en pantalla la exposicion al sol de la compostera
 	  lcd_put_cur(1, 8);
+	  lcd_send_string("S:");
+	  lcd_put_cur(1, 10);
 	  lcd_send_string(sun_exposition);
 
-	  HAL_Delay(1000);
+	  HAL_Delay(5000);
 	  //Envío por UART
  	  //HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), 300);
- 	  HAL_UART_Transmit(&huart1,(uint8_t*)AT, strlen(AT), 300);
- 	  HAL_Delay(3000);
+ 	  //HAL_UART_Transmit(&huart1,(uint8_t*)AT, strlen(AT), 300);
 
+	  //Chequeo que los valores esten dentro de los limites
+	  temp_t=check_temperature(temperature_value);
+	  hum_t=check_humidity(humidity_value);
+
+	  //Si hay valores fuera de los limites, imprimo
+	  if(temp_t !=TEMP_OK || hum_t!=HUM_OK){
+		  print_error_msg(temp_t,hum_t);
+	  }
 	  lcd_clear();
   }
   /* USER CODE END 3 */

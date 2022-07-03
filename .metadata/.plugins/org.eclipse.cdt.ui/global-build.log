@@ -1,341 +1,53 @@
-15:33:01 **** Incremental Build of configuration Debug for project ESP ****
+19:26:23 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7848	     24	   1712	   9584	   2570	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:33:10 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-size   ESP.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7848	     24	   1712	   9584	   2570	ESP.elf
-Finished building: default.size.stdout
- 
-15:38:36 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7728	     24	   1712	   9464	   24f8	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:39:18 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7732	     24	   1712	   9468	   24fc	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:39:44 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-size   ESP.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7732	     24	   1712	   9468	   24fc	ESP.elf
-Finished building: default.size.stdout
- 
-15:42:11 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:71:13: error: redefinition of 'HTTPCLIENT'
-   71 | const char* HTTPCLIENT="AT+HTTPGETSIZE=\"https://www.google.com.ar\\r\n";
-      |             ^~~~~~~~~~
-../Core/Src/main.c:70:13: note: previous definition of 'HTTPCLIENT' was here
-   70 | const char* HTTPCLIENT="AT+HTTPCLIENT=2,0,\"https://www.google.com.ar\",1\r\n";
-      |             ^~~~~~~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j4 all" terminated with exit code 2. Build might be incomplete.
-15:42:50 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7728	     24	   1712	   9464	   24f8	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:43:35 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7728	     24	   1712	   9464	   24f8	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:47:19 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7800	     24	   1712	   9536	   2540	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:49:57 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7720	     24	   1712	   9456	   24f0	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:51:46 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-size   ESP.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7720	     24	   1712	   9456	   24f0	ESP.elf
-Finished building: default.size.stdout
- 
-15:52:12 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-size   ESP.elf 
-   text	   data	    bss	    dec	    hex	filename
-   7720	     24	   1712	   9456	   24f0	ESP.elf
-Finished building: default.size.stdout
- 
-15:53:38 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7720	     24	   1712	   9456	   24f0	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-15:59:18 **** Incremental Build of configuration Debug for project ESP ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "ESP.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\ESP\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ESP.elf
- 
-arm-none-eabi-size   ESP.elf 
-arm-none-eabi-objdump -h -S  ESP.elf  > "ESP.list"
-   text	   data	    bss	    dec	    hex	filename
-   7668	     24	   1712	   9404	   24bc	ESP.elf
-Finished building: default.size.stdout
- 
-Finished building: ESP.list
- 
-16:22:34 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:84:12: warning: initializer-string for array of 'char' is too long
-   84 | char AT[6]="temp=\"value\"\r\n";
-      |            ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:209:18: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  209 |    sprintf(hum,"%u",humidity);
-      |                 ~^  ~~~~~~~~
-      |                  |  |
-      |                  |  uint32_t {aka long unsigned int}
-      |                  unsigned int
-      |                 %lu
-../Core/Src/main.c:210:19: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  210 |    sprintf(temp,"%u",temperature);
-      |                  ~^  ~~~~~~~~~~~
-      |                   |  |
-      |                   |  uint32_t {aka long unsigned int}
-      |                   unsigned int
-      |                  %lu
-../Core/Src/main.c:211:30: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  211 |    sprintf(sun_exposition, "%u",sun);
-      |                             ~^  ~~~
-      |                              |  |
-      |                              |  uint32_t {aka long unsigned int}
-      |                              unsigned int
-      |                             %lu
-../Core/Src/main.c:212:40: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                       ~^                                       ~~~~~~~~
-      |                                        |                                       |
-      |                                        unsigned int                            uint32_t {aka long unsigned int}
-      |                                       %lu
-../Core/Src/main.c:212:55: warning: format '%u' expects argument of type 'unsigned int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                                      ~^                                  ~~~~~~~~~~~
-      |                                                       |                                  |
-      |                                                       unsigned int                       uint32_t {aka long unsigned int}
-      |                                                      %lu
-../Core/Src/main.c:212:62: warning: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                                             ~^                                        ~~~
-      |                                                              |                                        |
-      |                                                              unsigned int                             uint32_t {aka long unsigned int}
-      |                                                             %lu
 ../Core/Src/main.c: In function 'MX_ADC1_Init':
-../Core/Src/main.c:304:26: warning: unused variable 'sConfig' [-Wunused-variable]
-  304 |   ADC_ChannelConfTypeDef sConfig = {0};
+../Core/Src/main.c:325:26: warning: unused variable 'sConfig' [-Wunused-variable]
+  325 |   ADC_ChannelConfTypeDef sConfig = {0};
       |                          ^~~~~~~
-arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: COMPOSTARIO.elf
  
 arm-none-eabi-size   COMPOSTARIO.elf 
 arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
    text	   data	    bss	    dec	    hex	filename
-  16872	    128	   1928	  18928	   49f0	COMPOSTARIO.elf
+  28248	    500	   1924	  30672	   77d0	COMPOSTARIO.elf
 Finished building: default.size.stdout
  
 Finished building: COMPOSTARIO.list
  
-16:24:06 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+19:36:23 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:209:18: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  209 |    sprintf(hum,"%u",humidity);
-      |                 ~^  ~~~~~~~~
-      |                  |  |
-      |                  |  uint32_t {aka long unsigned int}
-      |                  unsigned int
-      |                 %lu
-../Core/Src/main.c:210:19: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  210 |    sprintf(temp,"%u",temperature);
-      |                  ~^  ~~~~~~~~~~~
-      |                   |  |
-      |                   |  uint32_t {aka long unsigned int}
-      |                   unsigned int
-      |                  %lu
-../Core/Src/main.c:211:30: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  211 |    sprintf(sun_exposition, "%u",sun);
-      |                             ~^  ~~~
-      |                              |  |
-      |                              |  uint32_t {aka long unsigned int}
-      |                              unsigned int
-      |                             %lu
-../Core/Src/main.c:212:40: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                       ~^                                       ~~~~~~~~
-      |                                        |                                       |
-      |                                        unsigned int                            uint32_t {aka long unsigned int}
-      |                                       %lu
-../Core/Src/main.c:212:55: warning: format '%u' expects argument of type 'unsigned int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                                      ~^                                  ~~~~~~~~~~~
-      |                                                       |                                  |
-      |                                                       unsigned int                       uint32_t {aka long unsigned int}
-      |                                                      %lu
-../Core/Src/main.c:212:62: warning: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                                             ~^                                        ~~~
-      |                                                              |                                        |
-      |                                                              unsigned int                             uint32_t {aka long unsigned int}
-      |                                                             %lu
 ../Core/Src/main.c: In function 'MX_ADC1_Init':
-../Core/Src/main.c:304:26: warning: unused variable 'sConfig' [-Wunused-variable]
-  304 |   ADC_ChannelConfTypeDef sConfig = {0};
+../Core/Src/main.c:331:26: warning: unused variable 'sConfig' [-Wunused-variable]
+  331 |   ADC_ChannelConfTypeDef sConfig = {0};
       |                          ^~~~~~~
-arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: COMPOSTARIO.elf
  
 arm-none-eabi-size   COMPOSTARIO.elf 
 arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
    text	   data	    bss	    dec	    hex	filename
-  16872	    140	   1924	  18936	   49f8	COMPOSTARIO.elf
+  28304	    500	   1924	  30728	   7808	COMPOSTARIO.elf
 Finished building: default.size.stdout
  
 Finished building: COMPOSTARIO.list
  
-16:25:23 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+19:38:34 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:209:18: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  209 |    sprintf(hum,"%u",humidity);
-      |                 ~^  ~~~~~~~~
-      |                  |  |
-      |                  |  uint32_t {aka long unsigned int}
-      |                  unsigned int
-      |                 %lu
-../Core/Src/main.c:210:19: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  210 |    sprintf(temp,"%u",temperature);
-      |                  ~^  ~~~~~~~~~~~
-      |                   |  |
-      |                   |  uint32_t {aka long unsigned int}
-      |                   unsigned int
-      |                  %lu
-../Core/Src/main.c:211:30: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  211 |    sprintf(sun_exposition, "%u",sun);
-      |                             ~^  ~~~
-      |                              |  |
-      |                              |  uint32_t {aka long unsigned int}
-      |                              unsigned int
-      |                             %lu
-../Core/Src/main.c:212:40: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                       ~^                                       ~~~~~~~~
-      |                                        |                                       |
-      |                                        unsigned int                            uint32_t {aka long unsigned int}
-      |                                       %lu
-../Core/Src/main.c:212:55: warning: format '%u' expects argument of type 'unsigned int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                                      ~^                                  ~~~~~~~~~~~
-      |                                                       |                                  |
-      |                                                       unsigned int                       uint32_t {aka long unsigned int}
-      |                                                      %lu
-../Core/Src/main.c:212:62: warning: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  212 |    sprintf(msg, "distancia:%u Humedad:%u Temperatura:%u Sol:%u \r\n",distance, humidity, temperature, sun);
-      |                                                             ~^                                        ~~~
-      |                                                              |                                        |
-      |                                                              unsigned int                             uint32_t {aka long unsigned int}
-      |                                                             %lu
 ../Core/Src/main.c: In function 'MX_ADC1_Init':
-../Core/Src/main.c:304:26: warning: unused variable 'sConfig' [-Wunused-variable]
-  304 |   ADC_ChannelConfTypeDef sConfig = {0};
+../Core/Src/main.c:331:26: warning: unused variable 'sConfig' [-Wunused-variable]
+  331 |   ADC_ChannelConfTypeDef sConfig = {0};
       |                          ^~~~~~~
-arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: COMPOSTARIO.elf
  
 arm-none-eabi-size   COMPOSTARIO.elf 
 arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
    text	   data	    bss	    dec	    hex	filename
-  16872	    140	   1924	  18936	   49f8	COMPOSTARIO.elf
+  28304	    500	   1924	  30728	   7808	COMPOSTARIO.elf
 Finished building: default.size.stdout
  
 Finished building: COMPOSTARIO.list

@@ -8799,3 +8799,51 @@ Remote communication error.  Target disconnected.: (undocumented errno 10061).
 java.lang.Exception: Remote communication error.  Target disconnected.: (undocumented errno 10061).
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1013)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:842)
+!SESSION 2022-07-02 21:15:42.654 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-07-02 21:16:46.864
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-07-02 21:16:47.145
+!MESSAGE Log4j initialized with config file C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-07-02 21:17:11.975
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-07-03 13:43:19.061 -----------------------------------------------
+eclipse.buildId=Version 1.9.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-07-03 13:44:05.827
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-07-03 13:44:06.212
+!MESSAGE Log4j initialized with config file C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-07-03 13:44:32.030
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-07-03 18:17:34.084
+!MESSAGE Indexed 'COMPOSTARIO' (25 sources, 89 headers) in 3,33 sec: 5.867 declarations; 38.282 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,0045 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-07-03 18:17:40.928
+!MESSAGE Indexed 'COMPOSTARIO' (25 sources, 89 headers) in 2,6 sec: 5.867 declarations; 38.282 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,0045 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-07-03 18:18:42.027
+!MESSAGE Indexed 'COMPOSTARIO' (25 sources, 89 headers) in 2,38 sec: 5.867 declarations; 38.282 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,0045 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-07-03 18:24:44.238
+!MESSAGE Indexed 'COMPOSTARIO' (25 sources, 89 headers) in 2,47 sec: 5.867 declarations; 38.282 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,0045 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-07-03 18:42:09.570
+!MESSAGE Indexed 'COMPOSTARIO' (25 sources, 89 headers) in 2,13 sec: 5.867 declarations; 38.282 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,0045 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-07-03 18:42:38.510
+!MESSAGE Indexed 'COMPOSTARIO' (25 sources, 89 headers) in 1,86 sec: 5.867 declarations; 38.282 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,0045 %)

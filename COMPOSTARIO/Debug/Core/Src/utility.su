@@ -1,0 +1,7 @@
+../Core/Src/utility.c:25:9:map	16	static
+../Core/Src/utility.c:29:9:adc_to_hum	24	static
+../Core/Src/utility.c:37:9:adc_to_temp	24	static
+../Core/Src/utility.c:42:9:calculate_volume	16	static
+../Core/Src/utility.c:46:13:check_temperature	16	static
+../Core/Src/utility.c:59:12:check_humidity	16	static
+../Core/Src/utility.c:72:6:print_error_msg	16	static

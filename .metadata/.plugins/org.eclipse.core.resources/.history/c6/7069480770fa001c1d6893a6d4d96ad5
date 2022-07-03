@@ -1,0 +1,20 @@
+/*
+ * utility.c
+ *
+ *  Created on: 2 jul. 2022
+ *      Author: Ezequiel
+ */
+#include "stm32f1xx_hal.h"
+#include <utility.h>
+
+
+
+uint32_t map(uint32_t au32_IN, uint32_t au32_INmin, uint32_t au32_INmax, uint32_t au32_OUTmin, uint32_t au32_OUTmax){
+    return ((((au32_IN - au32_INmin)*(au32_OUTmax - au32_OUTmin))/(au32_INmax - au32_INmin)) + au32_OUTmin);
+}
+
+float adc_to_temp(uint32_t au32_IN){
+	float temp;
+	temp=(((au32_IN*3.3)/4096.0)*100);
+    return temp;
+}

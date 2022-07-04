@@ -209,13 +209,13 @@ int main(void)
 
 	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6)){
 		  sun_value=1;
-		  strncpy(sun_exposition,"SI",5);
-
+		  sun_exposition[0]="S";
+		  sun_exposition[1]="I";
 	  }
 	  else{
 		  sun_value=0;
-		  strncpy(sun_exposition,"NO",5);
-
+		  sun_exposition[0]="N";
+		  sun_exposition[1]="O";
 	  }
 
 

@@ -88,9 +88,6 @@ char hum[5]="";						//from values to messages
 char sun_exposition[5]="";			//from values to messages
 char msg[100]="";
 
-TempTypeDef temp_t;
-HUMTypeDef hum_t;
-
 char AT[20]="temp=\"Ezequiel\"\r\n";
 
 
@@ -209,13 +206,11 @@ int main(void)
 
 	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6)){
 		  sun_value=1;
-		  strncpy(sun_exposition,"SI",5);
-
+		  sun_exposition="SI";
 	  }
 	  else{
 		  sun_value=0;
-		  strncpy(sun_exposition,"NO",5);
-
+	  	  sun_exposition="NO";
 	  }
 
 

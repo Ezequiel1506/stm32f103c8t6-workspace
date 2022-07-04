@@ -28,7 +28,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <utility.h>
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -76,20 +75,17 @@ uint8_t volume  = 0;
 uint16_t adc_value[3];				//to store adc values
 uint16_t humidity_adc;				//to store adc values
 uint16_t temperature_adc;			//to store adc values
-//uint16_t sun_adc;					//to store adc values
+uint16_t sun_adc;					//to store adc values
 
 uint8_t humidity_value;				//to store  values
 uint8_t temperature_value;			//to store  values
-uint8_t sun_value;						//to store  values
+uint8_t sun_value;					//to store  values
 
 char vol[5]="";						//from values to messages
 char temp[5]="";					//from values to messages
 char hum[5]="";						//from values to messages
 char sun_exposition[5]="";			//from values to messages
 char msg[100]="";
-
-TempTypeDef temp_t;
-HUMTypeDef hum_t;
 
 char AT[20]="temp=\"Ezequiel\"\r\n";
 
@@ -201,23 +197,11 @@ int main(void)
 	  temperature_adc=HAL_ADC_GetValue(&hadc1);
 	  HAL_ADC_Stop(&hadc1);
 
-//	  ADC_Select_CH3();
-//	  HAL_ADC_Start(&hadc1);
-//	  HAL_ADC_PollForConversion(&hadc1, 1000);
-//	  sun_adc=HAL_ADC_GetValue(&hadc1);
-//	  HAL_ADC_Stop(&hadc1);
-
-	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_6)){
-		  sun_value=1;
-		  strncpy(sun_exposition,"SI",5);
-
-	  }
-	  else{
-		  sun_value=0;
-		  strncpy(sun_exposition,"NO",5);
-
-	  }
-
+	  ADC_Select_CH3();
+	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1, 1000);
+	  sun_adc=HAL_ADC_GetValue(&hadc1);
+	  HAL_ADC_Stop(&hadc1);
 
 
 	  //Lee el Ultrasonido
@@ -234,8 +218,8 @@ int main(void)
 	  sprintf(vol,"%u",volume);
 	  sprintf(hum,"%u",humidity_value);
 	  sprintf(temp,"%u",temperature_value);
-	  //sprintf(sun_exposition, "%u",sun_adc);
-	  sprintf(msg, "%u,%u,%u,%u\r\n",volume, humidity_value, temperature_value, sun_value);
+	  sprintf(sun_exposition, "%u",sun_adc);
+	  sprintf(msg, "%u,%u,%u,%u\r\n",volume, humidity_value, temperature_value, sun_adc);
 
 
 

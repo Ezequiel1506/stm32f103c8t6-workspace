@@ -52,3 +52,360 @@ Finished building: default.size.stdout
  
 Finished building: COMPOSTARIO.list
  
+22:15:54 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'MX_ADC1_Init':
+../Core/Src/main.c:331:26: warning: unused variable 'sConfig' [-Wunused-variable]
+  331 |   ADC_ChannelConfTypeDef sConfig = {0};
+      |                          ^~~~~~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28272	    500	   1924	  30696	   77e8	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+22:18:54 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28728	    500	   1924	  31152	   79b0	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+22:20:01 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28728	    500	   1924	  31152	   79b0	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+23:02:51 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o"
+arm-none-eabi-gcc "../Core/Src/LCD1602.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LCD1602.d" -MT"Core/Src/LCD1602.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/LCD1602.o"
+arm-none-eabi-gcc "../Core/Src/hc-sr04.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/hc-sr04.d" -MT"Core/Src/hc-sr04.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/hc-sr04.o"
+../Core/Src/hc-sr04.c: In function 'measure_distance':
+../Core/Src/hc-sr04.c:27:2: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   27 |  while (__HAL_TIM_GET_COUNTER (&timer) < 10);  // wait for 10 us
+      |  ^~~~~
+../Core/Src/hc-sr04.c:28:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+   28 |   HAL_GPIO_WritePin(TRIG_PORT, TRIG_PIN, GPIO_PIN_RESET); // pull the TRIG pin low
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/hc-sr04.c:32:2: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   32 |  while (!(HAL_GPIO_ReadPin(ECHO_PORT, ECHO_PIN))&& pMillis + 10 > HAL_GetTick());
+      |  ^~~~~
+../Core/Src/hc-sr04.c:33:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+   33 |   Value1 = __HAL_TIM_GET_COUNTER(&timer);
+      |   ^~~~~~
+../Core/Src/hc-sr04.c:37:2: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   37 |  while ((HAL_GPIO_ReadPin(ECHO_PORT, ECHO_PIN))&& pMillis + 50 > HAL_GetTick());
+      |  ^~~~~
+../Core/Src/hc-sr04.c:38:3: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+   38 |   Value2 = __HAL_TIM_GET_COUNTER(&timer);
+      |   ^~~~~~
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:207:31: error: 'GPIO_Pin_6' undeclared (first use in this function); did you mean 'GPIO_PIN_6'?
+  207 |    if(HAL_GPIO_ReadPin(GPIOA, GPIO_Pin_6)){
+      |                               ^~~~~~~~~~
+      |                               GPIO_PIN_6
+../Core/Src/main.c:207:31: note: each undeclared identifier is reported only once for each function it appears in
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+../Core/Src/main.c:209:19: error: assignment to expression with array type
+  209 |     sun_exposition="SI";
+      |                   ^
+../Core/Src/main.c:213:21: error: assignment to expression with array type
+  213 |       sun_exposition="NO";
+      |                     ^
+../Core/Src/main.c:273:4: error: 'temp_t' undeclared (first use in this function); did you mean 'temp'?
+  273 |    temp_t=check_temperature(temperature_value);
+      |    ^~~~~~
+      |    temp
+../Core/Src/main.c:274:4: error: 'hum_t' undeclared (first use in this function); did you mean 'hum'?
+  274 |    hum_t=check_humidity(humidity_value);
+      |    ^~~~~
+      |    hum
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:06:42 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/utility.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/utility.d" -MT"Core/Src/utility.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/utility.o"
+../Core/Src/utility.c: In function 'print_error_msg':
+../Core/Src/utility.c:77:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   77 |      lcd_send_string(OVER_TEMP);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:84:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   84 |      lcd_send_string(UNDER_TEMP);
+      |                      ^~~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:96:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   96 |      lcd_send_string(OVER_HUM);
+      |                      ^~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:103:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |      lcd_send_string(UNDER_HUM);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:209:19: error: assignment to expression with array type
+  209 |     sun_exposition="SI";
+      |                   ^
+../Core/Src/main.c:213:21: error: assignment to expression with array type
+  213 |       sun_exposition="NO";
+      |                     ^
+../Core/Src/main.c:273:4: error: 'temp_t' undeclared (first use in this function); did you mean 'temp'?
+  273 |    temp_t=check_temperature(temperature_value);
+      |    ^~~~~~
+      |    temp
+../Core/Src/main.c:273:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:274:4: error: 'hum_t' undeclared (first use in this function); did you mean 'hum'?
+  274 |    hum_t=check_humidity(humidity_value);
+      |    ^~~~~
+      |    hum
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:07:49 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:209:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  209 |     sun_exposition[0]="S";
+      |                      ^
+../Core/Src/main.c:210:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  210 |     sun_exposition[1]="I";
+      |                      ^
+../Core/Src/main.c:214:21: error: assignment to expression with array type
+  214 |       sun_exposition="NO";
+      |                     ^
+../Core/Src/main.c:274:4: error: 'temp_t' undeclared (first use in this function); did you mean 'temp'?
+  274 |    temp_t=check_temperature(temperature_value);
+      |    ^~~~~~
+      |    temp
+../Core/Src/main.c:274:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:275:4: error: 'hum_t' undeclared (first use in this function); did you mean 'hum'?
+  275 |    hum_t=check_humidity(humidity_value);
+      |    ^~~~~
+      |    hum
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:08:25 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:209:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  209 |     sun_exposition[0]="S";
+      |                      ^
+../Core/Src/main.c:210:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  210 |     sun_exposition[1]="I";
+      |                      ^
+../Core/Src/main.c:214:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  214 |     sun_exposition[0]="N";
+      |                      ^
+../Core/Src/main.c:215:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  215 |     sun_exposition[1]="O";
+      |                      ^
+../Core/Src/main.c:275:4: error: 'temp_t' undeclared (first use in this function); did you mean 'temp'?
+  275 |    temp_t=check_temperature(temperature_value);
+      |    ^~~~~~
+      |    temp
+../Core/Src/main.c:275:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:276:4: error: 'hum_t' undeclared (first use in this function); did you mean 'hum'?
+  276 |    hum_t=check_humidity(humidity_value);
+      |    ^~~~~
+      |    hum
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:09:36 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:212:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  212 |     sun_exposition[0]="S";
+      |                      ^
+../Core/Src/main.c:213:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  213 |     sun_exposition[1]="I";
+      |                      ^
+../Core/Src/main.c:217:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  217 |     sun_exposition[0]="N";
+      |                      ^
+../Core/Src/main.c:218:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  218 |     sun_exposition[1]="O";
+      |                      ^
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28840	    500	   1924	  31264	   7a20	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+23:10:43 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:212:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  212 |     sun_exposition[0]="S";
+      |                      ^
+../Core/Src/main.c:213:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  213 |     sun_exposition[1]="I";
+      |                      ^
+../Core/Src/main.c:217:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  217 |     sun_exposition[0]="N";
+      |                      ^
+../Core/Src/main.c:218:22: warning: assignment to 'char' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  218 |     sun_exposition[1]="O";
+      |                      ^
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28856	    500	   1924	  31280	   7a30	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+23:11:56 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:212:19: error: assignment to expression with array type
+  212 |     sun_exposition="SI";
+      |                   ^
+../Core/Src/main.c:216:19: error: assignment to expression with array type
+  216 |     sun_exposition="NO";
+      |                   ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:17:36 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:212:5: error: too few arguments to function 'strncpy'
+  212 |     strncpy(sun_exposition,"SI");
+      |     ^~~~~~~
+In file included from ../Core/Src/main.c:29:
+c:\st\stm32cubeide_1.9.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:44:8: note: declared here
+   44 | char  *strncpy (char *__restrict, const char *__restrict, size_t);
+      |        ^~~~~~~
+../Core/Src/main.c:217:5: error: too few arguments to function 'strncpy'
+  217 |     strncpy(sun_exposition,"NO");
+      |     ^~~~~~~
+In file included from ../Core/Src/main.c:29:
+c:\st\stm32cubeide_1.9.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\include\string.h:44:8: note: declared here
+   44 | char  *strncpy (char *__restrict, const char *__restrict, size_t);
+      |        ^~~~~~~
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+23:17:51 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:212:5: warning: 'strncpy' output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+  212 |     strncpy(sun_exposition,"SI",2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:217:5: warning: 'strncpy' output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+  217 |     strncpy(sun_exposition,"NO",2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28792	    500	   1924	  31216	   79f0	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+23:18:21 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:212:5: warning: 'strncpy' output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+  212 |     strncpy(sun_exposition,"SI",2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:217:5: warning: 'strncpy' output truncated before terminating nul copying 2 bytes from a string of the same length [-Wstringop-truncation]
+  217 |     strncpy(sun_exposition,"NO",2);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28792	    500	   1924	  31216	   79f0	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+23:19:45 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  28848	    500	   1924	  31272	   7a28	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 

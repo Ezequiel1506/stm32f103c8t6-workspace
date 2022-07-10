@@ -2,6 +2,7 @@ temperature_adc
 temperature_value
 humidity_adc
 humidity_value
-sun_adc
+sun_value
 hum
 temp
+humidity_adc

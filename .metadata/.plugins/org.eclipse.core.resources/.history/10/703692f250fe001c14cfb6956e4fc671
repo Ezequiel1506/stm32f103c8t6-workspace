@@ -36,6 +36,6 @@ TempTypeDef check_temperature(uint8_t temp);
 HUMTypeDef check_humidity(uint8_t hum);
 uint8_t adc_to_hum(uint16_t hum);
 void print_error_msg(TempTypeDef temp, HUMTypeDef hum);
-uint8_t calculate_volume(uint16_t h, float r);
+uint8_t calculate_volume(uint16_t h, uint8_t r);
 
 #endif /* INC_UTILITY_H_ */

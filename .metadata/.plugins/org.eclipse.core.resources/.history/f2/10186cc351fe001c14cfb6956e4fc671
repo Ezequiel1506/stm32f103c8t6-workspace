@@ -28,7 +28,7 @@ uint8_t map(uint16_t au16_IN, uint16_t au16_INmin, uint16_t au16_INmax, uint16_t
 
 uint8_t adc_to_hum(uint16_t hum){
 	uint8_t var;
-	var=-0.026*hum+105;
+	var=-0.042281*hum+169.13;
 	if(var>100){
 		var=100.00;
 	}
@@ -40,11 +40,7 @@ uint8_t adc_to_temp(uint16_t au16_IN){
     return temp;
 }
 uint8_t calculate_volume(uint16_t h, float r){
-	float var;
-	uint8_t vol;
-	var=h*r*r*2.14;
-	vol=var*100/288;
-	return (vol);
+	return (h*r*r*2.14);
 }
 
 TempTypeDef check_temperature(uint8_t temp){

@@ -409,3 +409,296 @@ Finished building: default.size.stdout
  
 Finished building: COMPOSTARIO.list
  
+21:01:24 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/utility.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/utility.d" -MT"Core/Src/utility.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/utility.o"
+../Core/Src/utility.c: In function 'print_error_msg':
+../Core/Src/utility.c:77:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   77 |      lcd_send_string(OVER_TEMP);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:84:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   84 |      lcd_send_string(UNDER_TEMP);
+      |                      ^~~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:96:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   96 |      lcd_send_string(OVER_HUM);
+      |                      ^~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:103:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  103 |      lcd_send_string(UNDER_HUM);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  29768	    500	   1924	  32192	   7dc0	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+21:06:06 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/utility.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/utility.d" -MT"Core/Src/utility.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/utility.o"
+../Core/Src/utility.c: In function 'print_error_msg':
+../Core/Src/utility.c:81:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   81 |      lcd_send_string(OVER_TEMP);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:88:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   88 |      lcd_send_string(UNDER_TEMP);
+      |                      ^~~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:100:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  100 |      lcd_send_string(OVER_HUM);
+      |                      ^~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:107:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  107 |      lcd_send_string(UNDER_HUM);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+21:14:13 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-size   COMPOSTARIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+21:16:08 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+21:17:01 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-size   COMPOSTARIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+21:17:21 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-size   COMPOSTARIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+21:25:16 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-size   COMPOSTARIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+21:31:46 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/utility.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/utility.d" -MT"Core/Src/utility.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/utility.o"
+../Core/Src/utility.c: In function 'print_error_msg':
+../Core/Src/utility.c:81:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   81 |      lcd_send_string(OVER_TEMP);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:88:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   88 |      lcd_send_string(UNDER_TEMP);
+      |                      ^~~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:100:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  100 |      lcd_send_string(OVER_HUM);
+      |                      ^~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:107:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  107 |      lcd_send_string(UNDER_HUM);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+21:32:59 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/utility.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/utility.d" -MT"Core/Src/utility.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/utility.o"
+../Core/Src/utility.c: In function 'print_error_msg':
+../Core/Src/utility.c:81:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   81 |      lcd_send_string(OVER_TEMP);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:88:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   88 |      lcd_send_string(UNDER_TEMP);
+      |                      ^~~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:100:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  100 |      lcd_send_string(OVER_HUM);
+      |                      ^~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:107:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  107 |      lcd_send_string(UNDER_HUM);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+21:34:25 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/utility.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/utility.d" -MT"Core/Src/utility.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/utility.o"
+../Core/Src/utility.c: In function 'print_error_msg':
+../Core/Src/utility.c:81:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   81 |      lcd_send_string(OVER_TEMP);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:88:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   88 |      lcd_send_string(UNDER_TEMP);
+      |                      ^~~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:100:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  100 |      lcd_send_string(OVER_HUM);
+      |                      ^~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+../Core/Src/utility.c:107:22: warning: passing argument 1 of 'lcd_send_string' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  107 |      lcd_send_string(UNDER_HUM);
+      |                      ^~~~~~~~~
+In file included from ../Core/Src/utility.c:9:
+../Core/Inc/LCD1602.h:18:29: note: expected 'char *' but argument is of type 'const char *'
+   18 | void lcd_send_string (char *str);  // send string to the lcd
+      |                       ~~~~~~^~~
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
+09:43:01 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-size   COMPOSTARIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+09:45:10 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-size   COMPOSTARIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+12:43:05 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-size   COMPOSTARIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+12:48:25 **** Incremental Build of configuration Debug for project COMPOSTARIO ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "COMPOSTARIO.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ezequiel\STM32CubeIDE\workspace_1.9.0\COMPOSTARIO\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COMPOSTARIO.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: COMPOSTARIO.elf
+ 
+arm-none-eabi-size   COMPOSTARIO.elf 
+arm-none-eabi-objdump -h -S  COMPOSTARIO.elf  > "COMPOSTARIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  30344	    500	   1924	  32768	   8000	COMPOSTARIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: COMPOSTARIO.list
+ 
